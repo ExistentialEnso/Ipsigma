@@ -1,0 +1,30 @@
+{
+  "name": "Ipsigma",
+  "version": "0.0.1",
+  "description": "A React based toolkit for making Lorem Ipsum generators.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lorem ipsum",
+    "generator",
+    "react"
+  ],
+  "author": "Thorne N. Melcher <www.thornemelcher.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^7.3.0",
+    "bower": "^1.8.0",
+    "browserify": "^14.3.0",
+    "chance": "^1.0.8",
+    "clipboard-js": "^0.3.3",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}
