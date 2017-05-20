@@ -112,9 +112,9 @@ class IpsigmaGenerator extends React.Component {
 
                    output += word;
 
-                   if(i !== 49) {
+                   if(i !== (paragraphLength-1)) {
                        // Generate a random value that will be used to randomly sprinkle in punctuation.
-                       let punctValue = chance.integer({min:1, max:10}) === 10;
+                       let punctValue = chance.integer({min:1, max:10});
 
                        if(punctValue === 10) { // Randomly, 10% of the time, end the sentence.
                            output += this.state.sentenceEndings[chance.integer({min:0, max:this.state.sentenceEndings.length-1})];

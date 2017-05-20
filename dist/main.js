@@ -30317,9 +30317,9 @@ var IpsigmaGenerator = function (_React$Component) {
 
                         output += word;
 
-                        if (i !== 49) {
+                        if (i !== paragraphLength - 1) {
                             // Generate a random value that will be used to randomly sprinkle in punctuation.
-                            var punctValue = chance.integer({ min: 1, max: 10 }) === 10;
+                            var punctValue = chance.integer({ min: 1, max: 10 });
 
                             if (punctValue === 10) {
                                 // Randomly, 10% of the time, end the sentence.
