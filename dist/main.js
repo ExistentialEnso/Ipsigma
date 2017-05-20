@@ -30172,14 +30172,17 @@ var IpsigmaGenerator = function (_React$Component) {
     function IpsigmaGenerator(props) {
         _classCallCheck(this, IpsigmaGenerator);
 
-        // Define our initial state.
+        // Define our initial state. Edit these values to change the behavior of the application.
         var _this = _possibleConstructorReturn(this, (IpsigmaGenerator.__proto__ || Object.getPrototypeOf(IpsigmaGenerator)).call(this, props));
 
         _this.state = {
-            output: '',
-            paragraphCount: 2,
-            type: 'Pikachu',
-            types: [{
+            output: '', // Initial output for the text box.
+            paragraphCount: 3, // Initial value for number of paragraphs to generate
+            sentenceEndings: // Punctuation marks that can end sentences. Adding duplicates increases their likelihood.
+            ['.', '.', '.', '!', '?'],
+            type: 'Pikachu', // Initial value for the type of lipsum to generate
+            types: [// Schema for the different types of generation available.
+            {
                 name: "Pikachu",
                 words: ["pikachu", "pika", "chuchu", "pikapi", "pikaaa", "pipika", "kachu", "pipikachu", "piiikachu", "pi", "kachuuu", "chu"]
             }, {
@@ -30188,8 +30191,7 @@ var IpsigmaGenerator = function (_React$Component) {
             }, {
                 name: "Charmander",
                 words: ["charmander", "charchar", "char", "charcharchar", "chaaaarmander", "charcharmander", "chaaaar", "mander"]
-            }],
-            sentenceEndings: ['.', '.', '.', '!', '?']
+            }]
         };
         return _this;
     }
@@ -30203,7 +30205,7 @@ var IpsigmaGenerator = function (_React$Component) {
                 React.createElement(
                     'h1',
                     null,
-                    'PikaIpsum'
+                    this.props.appName || "Ipsigma"
                 ),
                 React.createElement(
                     'div',

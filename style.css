@@ -7,3 +7,19 @@
     width:100%;
     height:100%;
 }
+
+body {
+    font-family: 'Catamaran', sans-serif;
+}
+
+footer {
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    width:100%;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:90%;
+    padding:3px;
+}

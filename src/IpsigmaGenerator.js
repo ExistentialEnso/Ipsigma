@@ -11,10 +11,12 @@ class IpsigmaGenerator extends React.Component {
 
         // Define our initial state.
         this.state = {
-            output: '',
-            paragraphCount: 2,
-            type: 'Pikachu',
-            types: [
+            output: '',             // Initial output for the text box.
+            paragraphCount: 3,      // Initial value for number of paragraphs to generate
+            sentenceEndings:        // Punctuation marks that can end sentences. Adding duplicates increases their likelihood.
+                ['.', '.', '.', '!', '?'],
+            type: 'Pikachu',        // Initial value for the type of lipsum to generate
+            types: [                // Schema for the different types of generation available.
                 {
                     name: "Pikachu",
                     words: ["pikachu", "pika", "chuchu", "pikapi", "pikaaa", "pipika", "kachu", "pipikachu", "piiikachu", "pi", "kachuuu", "chu"]
@@ -27,15 +29,14 @@ class IpsigmaGenerator extends React.Component {
                     name: "Charmander",
                     words: ["charmander", "charchar", "char", "charcharchar", "chaaaarmander", "charcharmander", "chaaaar", "mander"]
                 }
-            ],
-            sentenceEndings: ['.', '.', '.', '!', '?']
+            ]
         };
     }
 
    render() {
        return (
            <div className="generator">
-               <h1>PikaIpsum</h1>
+               <h1>{this.props.appName || "Ipsigma"}</h1>
                <div className="row">
                    <div className="col-xs-6">
                        <label>Type</label>
